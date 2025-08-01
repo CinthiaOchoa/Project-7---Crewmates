@@ -106,9 +106,6 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-/* Add more global styles as needed */
-
-/* You can add a max-width container for layout consistency */
 .container {
   max-width: 1280px;
   margin-left: auto;
