@@ -3,6 +3,7 @@ import { supabase } from '../supabaseClient'
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
+
 export default function CrewmateForm() {
   const [name, setName] = useState('')
   const [color, setColor] = useState('')

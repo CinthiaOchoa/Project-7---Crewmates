@@ -3,6 +3,7 @@ import { supabase } from '../supabaseClient'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
+
 export default function CrewmateList() {
   const [crewmates, setCrewmates] = useState([])
 
