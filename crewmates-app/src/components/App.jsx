@@ -1,21 +1,28 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
-import Home from "./pages/Home";
-import Create from "./pages/Create";
-import Gallery from "./pages/Gallery";
+import Home from "./components/Home";
+import Create from "./components/Create";
+import Gallery from "./components/Gallery";
+import CrewmateForm from "./components/CrewmateForm";
+import CrewmateList from "./components/CrewmateList";
+import CrewmateDetail from "./components/CrewmateDetail";
+import CrewmateEdit from "./components/CrewmateEdit";
 
 export default function App() {
   return (
     <Router>
-      <div className="flex">
+      <div className="flex min-h-screen">
         <Sidebar />
-        <div className="flex-1 bg-gray-100 min-h-screen p-8">
+        <main className="flex-1 ml-64 p-8 bg-gray-100">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/create" element={<Create />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/new" element={<CrewmateForm />} />
+            <Route path="/crewmate/:id" element={<CrewmateDetail />} />
+            <Route path="/edit/:id" element={<CrewmateEdit />} />
           </Routes>
-        </div>
+        </main>
       </div>
     </Router>
   );
